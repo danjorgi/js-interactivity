@@ -27,7 +27,7 @@ document.querySelector("form").addEventListener("submit", addMovie);
 let deleteMovie = (event) => {
     event.target.parentNode.remove();
 
-    message.textContent = 'Movie deleted!';
+    message.textContent = `${event.target.parentNode.firstChild.textContent} deleted!`;
 
     revealMessage();
 }

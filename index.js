@@ -36,9 +36,9 @@ let crossOffMovie = (event) => {
     event.target.classList.toggle('checked');
 
     if(event.target.classList.contains('checked')){
-        message.textContent = 'Movie watched!'
+        message.textContent = `${event.target.textContent} watched!`
     } else {
-        message.textContent = 'Movie added back!'
+        message.textContent = `${event.target.textContent} added back!`
     }
 
     revealMessage();

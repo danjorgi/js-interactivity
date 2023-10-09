@@ -28,6 +28,8 @@ let deleteMovie = (event) => {
     event.target.parentNode.remove();
 
     message.textContent = 'Movie deleted!';
+
+    revealMessage();
 }
 
 let crossOffMovie = (event) => {
@@ -38,4 +40,14 @@ let crossOffMovie = (event) => {
     } else {
         message.textContent = 'Movie added back!'
     }
+
+    revealMessage();
+}
+
+let revealMessage = () => {
+    message.classList.remove('hide');
+
+    setTimeout(() => {
+        message.classList.add('hide')        
+    }, 1000);
 }
